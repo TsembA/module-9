@@ -2,3 +2,10 @@
 app/node_modules
 *.DS_Store
 *tgz
+node_modules
+npm-debug.log
+Dockerfile
+docker-compose.yml
+.git
+.gitignore
+.env
