@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def class() {
+def call() {
     withCredentials([usernamePassword(credentialsId: 'github-credentials', usernameVariable: 'USER', passwordVariable: 'TOKEN')]) {
         script {
             sh 'git config --global user.email "tsembenhoi@gmail.com"'
