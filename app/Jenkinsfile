@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('INCREMENT VERSION') {
             steps {
-                dir('app') {
+                dir('vars') {
                     script {
                         incrementVersion()
                     }
@@ -21,7 +21,7 @@ pipeline {
 
         stage('RUN TEST') {
             steps {
-                dir('app') {
+                dir('vars') {
                     script {
                         testApp()
                     }
@@ -39,7 +39,7 @@ pipeline {
 
         stage('COMMIT VERSION UPDATE') {
             steps {
-                dir('app') {
+                dir('vars') {
                     script {
                         commitVersionUpdate()
                     }
