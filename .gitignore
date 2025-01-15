@@ -4,7 +4,6 @@ app/node_modules
 *tgz
 node_modules
 npm-debug.log
-Dockerfile
 docker-compose.yml
 .git
 .gitignore
