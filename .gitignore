@@ -4,6 +4,10 @@ app/node_modules
 *tgz
 node_modules
 npm-debug.log
+<<<<<<< HEAD
+=======
+docker-compose.yml
+>>>>>>> 67b017fa7be767bce78d674e3b67a4d8eab3c63d
 .git
 .gitignore
 key.txt
