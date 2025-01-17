@@ -50,6 +50,7 @@ pipeline {
                 }
             }
         }
+
         stage('COMMIT VERSION UPDATE') {
             steps {
                 dir('app') {
