@@ -11,3 +11,5 @@ docker-compose.yml
 .git
 .gitignore
 key.txt
+WebServerKey.pem
+tsemb-key.pem
