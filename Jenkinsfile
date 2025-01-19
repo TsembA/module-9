@@ -9,7 +9,7 @@ pipeline {
         nodejs "node"
     }
     environment {
-        IMAGE_NAME = 'dancedevops/my-node-app:2.0.0-11'
+        IMAGE_NAME = 'dancedevops/my-node-app'
     }
     stages {
         stage('INCREMENT VERSION') {
