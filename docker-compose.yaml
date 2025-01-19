@@ -1,6 +1,6 @@
 version: '3.8'
 services:
-    nodejs-app:
-      image: dancedevops/my-node-app:2.0.0-8
-        - 3000:3000
-
+  nodejs-app:
+    image: ${IMAGE}  # The image name is passed via the IMAGE environment variable
+    ports:
+      - "3000:3000"
