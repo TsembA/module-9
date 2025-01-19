@@ -8,7 +8,7 @@ pipeline {
     tools {
         nodejs "node"
     }
-    eviroment {
+    evironment {
         IMAGE_NAME = 'dancedevops/my-node-app:2.0.0-11'
     }
     stages {
