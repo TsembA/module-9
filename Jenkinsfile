@@ -8,6 +8,9 @@ pipeline {
     tools {
         nodejs "node"
     }
+    eviroment {
+        IMAGE_NAME = 'dancedevops/my-node-app:2.0.0-11'
+    }
     stages {
         stage('INCREMENT VERSION') {
             steps {
@@ -40,6 +43,7 @@ pipeline {
             steps {
                 script {
                    def shellCmd = "bash ./server-cmds.sh ${IMAGE_NAME}"
+                   
                    def ec2Instance = "ec2-user@54.183.216.49"
 
                    sshagent(['ec2-server-key']) {
