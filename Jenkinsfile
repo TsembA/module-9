@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-@Library('jenkins-shared-library')
+@Library('jenkins-shared-library') _
 def gv
 
 pipeline {
@@ -11,8 +11,10 @@ pipeline {
     stages {
         stage('INCREMENT VERSION') {
             steps {
-                script {
-                    incrementVersion()
+                dir('app') {
+                    script {
+                        incrementVersion()
+                    }
                 }
             }
         }
