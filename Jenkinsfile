@@ -1,13 +1,13 @@
 #!/usr/bin/env groovy
 
-@Library('jenkins-shared-library')
+@Library('jenkins-shared-library') _
 def gv
 
 pipeline {
     agent any
     tools {
         nodejs "node"
-    }
+    } 
     stages {
         stage('INCREMENT VERSION') {
             steps {
@@ -36,11 +36,11 @@ pipeline {
                 }
             }
         }
-
         stage('deploy to EC2') {
             steps {
                 script {
                    def shellCmd = "bash ./server-cmds.sh ${IMAGE_NAME}"
+                   
                    def ec2Instance = "ec2-user@54.183.216.49"
 
                    sshagent(['ec2-server-key']) {
