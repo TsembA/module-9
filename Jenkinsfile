@@ -7,7 +7,6 @@ pipeline {
     agent any
     tools {
         nodejs "node"
-        groovy "groovy"
     } 
     stages {
         stage('INCREMENT VERSION') {
@@ -42,7 +41,7 @@ pipeline {
                 script {
                    def shellCmd = "bash ./server-cmds.sh ${IMAGE_NAME}"
                    
-                   def ec2Instance = "ec2-user@54.183.216.49"
+                   def ec2Instance = "ec2-user@54.215.243.64"
 
                    sshagent(['ec2-server-key']) {
                        sh "scp -o StrictHostKeyChecking=no server-cmds.sh ${ec2Instance}:/home/ec2-user"
