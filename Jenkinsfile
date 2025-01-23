@@ -12,7 +12,7 @@ pipeline {
     stages {
         stage('INCREMENT VERSION') {
             steps {
-                dir('app') {
+                dir('vars') {
                     script {
                         incrementVersion()
                     }
@@ -22,7 +22,7 @@ pipeline {
 
         stage('RUN TEST') {
             steps {
-                dir('app') {
+                dir('vars') {
                     script {
                         testApp()
                     }
