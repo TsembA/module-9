@@ -1,7 +1,6 @@
 #!/usr/bin/env groovy
 
 @Library('jenkins-shared-library') _
-
 def gv
 
 pipeline {
@@ -12,7 +11,7 @@ pipeline {
     stages {
         stage('INCREMENT VERSION') {
             steps {
-                dir('vars') {
+                dir('app') {
                     script {
                         incrementVersion()
                     }
@@ -22,7 +21,7 @@ pipeline {
 
         stage('RUN TEST') {
             steps {
-                dir('vars') {
+                dir('app') {
                     script {
                         testApp()
                     }
