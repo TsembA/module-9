@@ -7,10 +7,7 @@ pipeline {
     agent any
     tools {
         nodejs "node"
-    }
-    environment {
-        IMAGE_NAME = "dancedevops/my-node-app:${IMAGE_NAME}"
-    }
+    } 
     stages {
         stage('INCREMENT VERSION') {
             steps {
