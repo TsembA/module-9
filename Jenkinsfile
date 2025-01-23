@@ -11,7 +11,6 @@ pipeline {
     stages {
         stage('INCREMENT VERSION') {
             steps {
-                dir('app') {
                     script {
                         incrementVersion()
                     }
