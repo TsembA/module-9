@@ -7,6 +7,7 @@ pipeline {
     agent any
     tools {
         nodejs "node"
+        groovy "groovy"
     } 
     stages {
         stage('INCREMENT VERSION') {
