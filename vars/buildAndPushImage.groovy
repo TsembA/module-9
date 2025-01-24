@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-def call() {
+def buildAndPushImage() {
     withCredentials([usernamePassword(credentialsId: 'docker-credentials', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
         script {
             sh "docker build -t dancedevops/my-node-app:${IMAGE_NAME} -f Dockerfile ."
