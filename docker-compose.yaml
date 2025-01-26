@@ -1,6 +1,6 @@
 version: '2'
 services:
   nodejs-app:
-    image: dancedevops/my-node-app:2.0.0-34
+    image: {IMAGE}
     ports:
       - "3000:3000"
