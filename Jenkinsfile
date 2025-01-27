@@ -10,7 +10,7 @@ pipeline {
     }
     environment {
         IMAGE_NAME = ""
-        TAG = ""
+        TAG = "${BUILD_NUMBER}"
     }
     
     } 
@@ -78,4 +78,3 @@ pipeline {
             }
         }
     }
-}
