@@ -9,7 +9,10 @@ pipeline {
         nodejs "node"
     }
     environment {
-        IMAGE_NAME = "2.0.0-${BUILD_NUMBER}"
+        IMAGE_NAME = ""
+        TAG = ""
+    }
+    
     } 
     stages {
         stage('INCREMENT VERSION') {
