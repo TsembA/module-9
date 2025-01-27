@@ -1,6 +1,6 @@
 version: '2'
 services:
   nodejs-app:
-    image: ${IMAGE}
+    image: "dancedevops/my-node-app:${TAG}"
     ports:
       - "3000:3000"
