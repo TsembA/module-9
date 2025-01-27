@@ -8,10 +8,6 @@ pipeline {
     tools {
         nodejs "node"
     }
-    environment {
-        IMAGE_NAME = ""
-        TAG = "${BUILD_NUMBER}"
-    }
     
     stages {
         stage('INCREMENT VERSION') {
