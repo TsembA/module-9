@@ -5,5 +5,4 @@ COPY . .
 COPY app/package*.json ./
 RUN npm install
 EXPOSE 3000
-CMD ["node", "src/server.js"]
-
+CMD ["node", "server.js"]
