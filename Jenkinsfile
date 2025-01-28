@@ -36,7 +36,7 @@ pipeline {
         stage('BUILD AND PUSH DOCKER IMAGE') {
             steps {
                 script {
-                    buildAndPushImage()
+                    buildAndPushImage(env.IMAGE_NAME)
                 }
             }
         }
