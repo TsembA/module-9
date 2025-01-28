@@ -9,6 +9,9 @@ pipeline {
         nodejs "node"
     }
     
+    environment {
+        TAG = "2.0.0"
+    }
     stages {
         stage('INCREMENT VERSION') {
             steps {
@@ -43,7 +46,7 @@ pipeline {
                 script {
                    withCredentials([usernamePassword(credentialsId: 'docker-credentials', usernameVariable: 'USER', passwordVariable: 'PASS')]) {
                        def shellCmd = "bash ./server-cmds.sh ${IMAGE_NAME}"
-                       def ec2Instance = "ec2-user@3.101.47.1"
+                       def ec2Instance = "ec2-user@18.144.84.255"
 
                        sshagent(['ec2-server-key']) {
                            sh "echo 'Docker login...'"
