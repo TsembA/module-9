@@ -1,6 +1,6 @@
 # Dockerfile
 FROM node:18
-WORKDIR /usr/src/
+WORKDIR /usr/src/app
 
 COPY app/package.json ./
 RUN npm install
