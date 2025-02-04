@@ -51,8 +51,6 @@ pipeline {
                        sshagent(['ec2-server-key']) {
                            sh "echo 'Docker login...'"
                            sh 'echo $PASS| docker login -u $USER --password-stdin'
-                           sh "scp -o StrictHostKeyChecking=no app/ ec2-user@18.144.84.255:/home/ec2-user/app/"
-                           sh "scp -o StrictHostKeyChecking=no Dockerfile ec2-user@18.144.84.255:/home/ec2-user"
                            sh "scp -o StrictHostKeyChecking=no server-cmds.sh ${ec2Instance}:/home/ec2-user"
                            sh "scp -o StrictHostKeyChecking=no docker-compose.yaml ${ec2Instance}:/home/ec2-user"
                            
