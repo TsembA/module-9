@@ -1,8 +1,8 @@
 # Dockerfile
 FROM node:18
+COPY app /usr/src/app
 WORKDIR /usr/src/app
-
-COPY app/package.json ./
+COPY package*.json ./
 RUN npm install
 COPY . .
 EXPOSE 3000
