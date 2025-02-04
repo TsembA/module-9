@@ -1,8 +1,5 @@
 FROM node:18
-WORKDIR /usr/src/app
-COPY app /usr/src/app
-WORKDIR /usr/src/app
-COPY package*.json ./
+WORKDIR /usr/src/
 RUN npm install
 COPY . .
 EXPOSE 3000
