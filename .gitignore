@@ -1,11 +1,14 @@
 .idea
-app/node_modules
 *.DS_Store
 *tgz
 node_modules
 npm-debug.log
-Dockerfile
+<<<<<<< HEAD
+=======
 docker-compose.yml
+>>>>>>> 67b017fa7be767bce78d674e3b67a4d8eab3c63d
 .git
 .gitignore
-.env
+key.txt
+WebServerKey.pem
+tsemb-key.pem

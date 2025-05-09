@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
-def commitVersionUpdate() {
-    withCredentials([usernamePassword(credentialsId: 'github-credentials', usernameVariable: 'USER', passwordVariable: 'TOKEN')]) {
+def call() {
+    withCredentials([usernamePassword(credentialsId: 'github-credentials-token', usernameVariable: 'USER', passwordVariable: 'TOKEN')]) {
         script {
             sh 'git config --global user.email "tsembenhoi@gmail.com"'
             sh 'git config --global user.name "TsembA"'
